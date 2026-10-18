@@ -1,6 +1,11 @@
 # etsy-erank-research
 
-A free Claude skill that does Etsy product research from start to finish:
+A free Claude skill that does Etsy product research from start to finish.
+
+> **Not technical?** Copy this page's link, paste it into Claude Code, and say
+> *"install this skill for me"*. Claude does the setup. See [Install](#install).
+
+What it does:
 
 1. **Bestseller hunt.** Claude in Chrome reads Etsy search pages for your niche
    and logs every listing, with its Bestseller / Popular now badges, price, and
@@ -30,7 +35,7 @@ pressed flower art had 80. "japanese wall art" gets about 4x the searches of
 |---|---|
 | **Claude Code** on a paid Claude plan (Pro, Max, Team or Enterprise) | Runs the skill |
 | **Google Chrome + the [Claude in Chrome](https://claude.com/chrome) extension**, connected to Claude Code (`claude --chrome`, or `/chrome` in a session) | Reads Etsy and drives eRank in your own browser |
-| **An eRank account**, Pro recommended ([eRank, affiliate link](https://erank.com?fpr=randall)) | The keyword data. Pro is $9.99/month with 200 keyword searches a day. Each seed uses 1 search |
+| **An eRank account**, Pro recommended. If you sign up, please use [my eRank affiliate link](https://erank.com?fpr=randall): it supports the free skill at no extra cost to you | The keyword data. Pro is $9.99/month with 200 keyword searches a day. Each seed uses 1 search |
 | **Python 3.9+** with pandas and openpyxl (`pip install -r requirements.txt`) | Builds the spreadsheets |
 
 You log in to Etsy (optional) and eRank yourself. Claude never asks for or
@@ -38,14 +43,50 @@ types a password.
 
 ## Install
 
+### The easy way: let Claude do it
+
+You don't need to know GitHub. Open Claude Code and paste this:
+
+```text
+Install the skill at https://github.com/Pardesco/etsy-erank-research for me.
+```
+
+Claude downloads it, installs what it needs, and tells you when it's ready.
+
+### For Claude: how to install this skill
+
+When a user hands you this link and asks you to install it:
+
+1. Put the repository in the user's personal skills folder:
+   `~/.claude/skills/etsy-erank-research` (on Windows,
+   `%USERPROFILE%\.claude\skills\etsy-erank-research`). Use
+   `git clone https://github.com/Pardesco/etsy-erank-research <that folder>`.
+   If git is not installed, download
+   `https://github.com/Pardesco/etsy-erank-research/archive/refs/heads/main.zip`
+   and unzip its contents into that folder, so that `SKILL.md` sits directly
+   inside it.
+2. Run `python -m pip install -r <that folder>/requirements.txt` (use `python3`
+   if that is the command available). If Python is missing, tell the user to
+   install Python 3.9 or newer from python.org and stop there.
+3. Run `python <that folder>/scripts/check_env.py` and confirm it passes.
+4. Tell the user, in plain words, the three things they need before the first
+   run:
+   - The Claude in Chrome extension, with Claude Code started as
+     `claude --chrome`. A new session also loads the new skill.
+   - An eRank account (Pro recommended), logged in to in that Chrome.
+   - A niche to research. Then they just ask, for example: "Research what to
+     sell on Etsy for 'dog bandanas'."
+
+### Manual install
+
 ```bash
 # personal skill, available in every project
 git clone https://github.com/Pardesco/etsy-erank-research ~/.claude/skills/etsy-erank-research
 pip install -r ~/.claude/skills/etsy-erank-research/requirements.txt
 ```
 
-On Windows the folder is `%USERPROFILE%\.claude\skills\etsy-erank-research`.
-To use it in one project only, clone it into that project's `.claude/skills/`.
+To use it in one project only, clone it into that project's `.claude/skills/`
+instead.
 
 ## Use
 
