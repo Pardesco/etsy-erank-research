@@ -1,0 +1,83 @@
+# Starter list of brand / franchise / character / artist names. Phrases containing these are flagged
+# "IP / licence risk" and kept out of Clean Opportunities. Not legal advice and not complete:
+# the agent adds run-specific names to 02_seeds/ip_terms_extra.txt after reviewing the top results.
+disney
+pixar
+marvel
+dc comics
+star wars
+harry potter
+hogwarts
+lord of the rings
+ghibli
+totoro
+pokemon
+pikachu
+nintendo
+mario
+zelda
+sanrio
+hello kitty
+barbie
+lego
+bluey
+peppa pig
+paw patrol
+sesame street
+looney tunes
+minecraft
+fortnite
+roblox
+anime
+naruto
+one piece
+dragon ball
+demon slayer
+jujutsu
+sailor moon
+simpsons
+stranger things
+the office
+taylor swift
+swiftie
+beatles
+grateful dead
+nfl
+nba
+mlb
+nhl
+ncaa
+fifa
+f1
+formula 1
+coca cola
+starbucks
+nike
+adidas
+chanel
+louis vuitton
+gucci
+stanley cup
+labubu
+squishmallow
+banksy
+kaws
+warhol
+basquiat
+haring
+kusama
+hockney
+picasso
+matisse
+dali
+magritte
+okeeffe
+o'keeffe
+frida kahlo
+rothko
+lichtenstein
+dr seuss
+grinch
+snoopy
+winnie the pooh
+care bears
